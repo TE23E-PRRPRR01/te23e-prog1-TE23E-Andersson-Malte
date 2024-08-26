@@ -9,3 +9,8 @@ Console.Write("Ange efternamn: ");
 string efternamn = Console.ReadLine();
 Console.WriteLine("Hej " + förnamn + " " + efternamn + "!");
 
+if (efternamn == "Östräråg")
+{
+    Console.WriteLine("Du har det bästa efternamnet😎");
+}
+
