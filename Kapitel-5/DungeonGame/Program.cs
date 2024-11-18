@@ -1,16 +1,20 @@
 ﻿// Ett dungeon-spel med massa rum, saker, fiender, skatter...
 Console.Clear();
 
-
 //Programvariabler (state variables)
 string rum = "hallen";
 List<string> inventarie = [];
 int liv = 1;
 
-
 //Spelloop
 while (true)
 {
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("""
+------------
+DUNGEON SPEL
+------------
+""");
 Console.ForegroundColor = ConsoleColor.White;
     //Är vi i hallen?
     if (rum == "hallen")
@@ -22,7 +26,7 @@ Console.ForegroundColor = ConsoleColor.White;
         string val = Console.ReadLine();
         if (val == "1")
         {
-            Console.WriteLine("Du tittar runt och ser en sko.");
+            Console.WriteLine("Du tittar runt och ser en bild på din morsa.");
         }
         else if (val == "2")
         {
@@ -32,7 +36,7 @@ Console.ForegroundColor = ConsoleColor.White;
     }
     else if (rum == "rum 1")
     {
-        Console.WriteLine("Du kommer in i köket.");
+        Console.WriteLine("Du är i köket.");
         Console.WriteLine("1. Titta runt");
         Console.WriteLine("2. Gå till rummet på höger");
         Console.WriteLine("3. Gå till rummet på vänster");
@@ -158,7 +162,7 @@ Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("...du går tillbaka till köket...");
         }
     }
-    else if (rum == "4")
+    else if (rum == "rum 4")
     {
         Console.WriteLine("Du är i källaren");
         Console.WriteLine("1. Titta runt");
@@ -216,7 +220,10 @@ Console.ForegroundColor = ConsoleColor.White;
         {
             rum = "rum 3";
             Console.WriteLine("...du går tillbaka till vardagsrummet...");
-        }    }
+        }  
+        }
+       Thread.Sleep(2000);
+
         Console.Clear();
         
 }
